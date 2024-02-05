@@ -4,6 +4,8 @@
 Created on Tue Jan 30 12:16:07 2024
 
 @author: C_Thesner
+
+Please note, this script was written using the python version 3.9.7.  Some newer versions have had issues running the code for questions 10, 11 and 12 and produce errors that I do not experience in the python version 3.9.7
 """
 
 #####################
@@ -263,9 +265,9 @@ fig, ax = plt.subplots(figsize=(10, 6))
 
 sn.heatmap(Mov_set_corr.corr(), ax=ax, annot=True)
 
-plt.show()
+ans1 = "\n Correlation observation: \n \n 1.  The rank and year data showed very low and negative correlation overall.  This low correlation indicates that the rank and year have no influence on audience opinions. \n \n 2.  A relatively high positive correlation is seen between the votes and the runtime.  This indicates that how long a movie is has an influence on the audience's opinion.\n \n 3.The runtime however has a lower positive correlation with revenue, meaning that the runtime does not necessarily affect the revenue produced by the movie. \n \n 4. Rating and votes have a high positive correlations, which makes sense because something that has a high rating should have more votes. \n \n 5. Rating and revenue show very high positive correlation. The high rating will lead to more people watching the movies producing higher revenue values. \n \n  6. The Metascore only shows a positive high correlation with ratings, meaning that the audience and movie critics typically agree on the 'quality' of movies. \n \n"
 
-print(fig)
+ans2 = "\n Advice to directors: \n \n 1. Directors should consider genres and actors from those titles which had high votes, basing more movies on those statistics could imporove audience voting and, consequently, the revenue. \n \n 2. Directors should consider doing analysis on the runtime-vote and vote-revenue correlations in order to find the runtime 'sweetspot' which could potentially increase renevue due to increased votes. \n \n 3. The high correlation between the Metascore and the votes indicate that directors should pay attention to reviews from critics when planning future movies."
 
 
 
@@ -312,6 +314,7 @@ print("(The most common actor is) \n", com_act)
 print("\n" "The answer to Q11 is:") 
 print("(The number of unique genres) \n", gen_count) 
 
-
+print("\n" "The answer to Q12 is:") 
+print("(The correlation of numerical data, insights from correlation and advice to directors) \n", ans1, ans2) 
 
 
